@@ -313,7 +313,7 @@ class PDFObject
                             )
                         ) {
                             // horizontal offset
-                            $text .= ' ';
+                            // $text .= ' ';
                         }
                         $current_position_td = ['x' => $x, 'y' => $y];
                         break;
@@ -377,7 +377,7 @@ class PDFObject
                         if (false !== $current_position_tm['x']) {
                             $delta = abs((float) $x - (float) ($current_position_tm['x']));
                             if ($delta > 10) {
-                                $text .= "\t";
+                                // $text .= "\t";
                             }
                         }
                         if (false !== $current_position_tm['y']) {
