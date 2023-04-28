@@ -291,7 +291,7 @@ class PDFObject
                         } elseif (false !== $current_position_td['x'] && (float) $x > (float)
                             $current_position_td['x']
                         ) {
-                            $text .= $this->config->getHorizontalOffset();
+                            //$text .= $this->config->getHorizontalOffset();
                         }
                         $current_position_td = ['x' => $x, 'y' => $y];
                         break;
@@ -355,7 +355,8 @@ class PDFObject
                         if (false !== $current_position_tm['x']) {
                             $delta = abs((float) $x - (float) $current_position_tm['x']);
                             if ($delta > 10) {
-                                $text .= "\t";
+                                // $text .= "\t";
+                                $text .= ' ';
                             }
                         }
                         if (false !== $current_position_tm['y']) {
