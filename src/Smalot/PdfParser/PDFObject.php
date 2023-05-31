@@ -286,8 +286,11 @@ class PDFObject
                         if (((float) $x <= 0) ||
                             (false !== $current_position_td['y'] && (float) $y < (float) $current_position_td['y'])
                         ) {
-                            // vertical offset
-                            $text .= "\n";
+                            $diffpx = (float) $current_position_td['y'] - (float) $y;
+                            if ($diffpx > 1) {
+                                // vertical offset
+                                $text .= "\n";
+                            }
                         } elseif (false !== $current_position_td['x'] && (float) $x > (float)
                             $current_position_td['x']
                         ) {
